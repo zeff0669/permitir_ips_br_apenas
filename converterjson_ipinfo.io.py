@@ -2,11 +2,11 @@ import json
 import ipaddress
 
 # Abra o arquivo de entrada e leia as linhas
-with open('br-ips.json', 'r') as f:
+with open('/root/br-ips.json', 'r') as f:
     lines = f.readlines()
 
 # Abra os arquivos de saída para escrita
-with open('ipv4.txt', 'w') as f_ipv4, open('ipv6.txt', 'w') as f_ipv6:
+with open('/root/ipv4.txt', 'w') as f_ipv4, open('/root/ipv6.txt', 'w') as f_ipv6:
     # Processa cada linha
     for line in lines:
         # Carrega a linha como um objeto JSON
