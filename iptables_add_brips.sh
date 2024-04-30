@@ -5,5 +5,5 @@ while read -r range; do
 done < "/root/ipv4.txt"
 
 while read -r range6; do
-  iptables -A INPUT -m iprange6 --src-range6 "$range6" -j DROP
+  iptables -A INPUT -m iprange6 --src-range6 "$range6" -j ACCEPT
 done < "/root/ipv6.txt"
